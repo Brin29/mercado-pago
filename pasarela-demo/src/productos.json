@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "name": "Nike Air MX Super 2500 - Red",
+      "image": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "price": 449,
+      "originalPrice": 699,
+      "discount": 39,
+      "rating": 5.0
+    },
+    {
+      "id": 2,
+      "name": "Adidas UltraBoost 21 - Black",
+      "image": "https://images.unsplash.com/photo-1579446565308-427218a2c60e?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 179,
+      "originalPrice": 220,
+      "discount": 18,
+      "rating": 4.8
+    },
+    {
+      "id": 3,
+      "name": "Puma RS-X3 - White",
+      "image": "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 110,
+      "originalPrice": 150,
+      "discount": 27,
+      "rating": 4.5
+    },
+    {
+      "id": 4,
+      "name": "Reebok Nano X1 - Blue",
+      "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1996&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 139,
+      "originalPrice": 180,
+      "discount": 23,
+      "rating": 4.7
+    }
+  ]
+  
