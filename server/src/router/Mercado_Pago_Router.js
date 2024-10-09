@@ -11,21 +11,16 @@ mercadopago.configure({
 
 Mercado_Pago.post("/", async (req, res) => {
 
-    const ArrayProductos = req.body;
-
-    const NuevoArray =  ArrayProductos.map(e => {
-        return {
-            title: e.name, 
-                picture_url: "http://fgsfd",
-                unit_price: e.price,
-                currency_id: "ARS",
-                quantity: e.cantidad,
-        };
-    })
-
+    const productos = req.body;
     try{
         const preference = {
-            items: NuevoArray,
+            items: [{
+                title: productos.name, 
+                picture_url: productos.image,
+                unit_price: Number(productos.price),
+                currency_id: "ARS",
+                quantity: 1,
+            }],
             back_urls: {
                 success: "https://youtube.com",
                 failure: "https://youtube.com"

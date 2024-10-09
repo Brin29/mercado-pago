@@ -1,10 +1,15 @@
+import axios from "axios";
 import productos from "../productos.json"
 
 export default function Product() {
-  
+    const FuncionComprar = async (producto) => {
+        const response = await axios.post("http://localhost:3000/Mercado_Pago", productos)
+    
+        window.location.href = response.data;
+    }
+    
     return (
     <>
-    <h1>Hola Mundo</h1>
     {
     productos.map((e) => (
         <div key={e.id} className="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
@@ -18,11 +23,11 @@ export default function Product() {
         </a>
         <div className="mt-4 px-5 pb-5">
           <a href="#">
-            <h5 className="text-xl tracking-tight text-slate-900">{e.name}</h5>
+            <h5 className="text-xl tra cking-tight text-slate-900">{e.name}</h5>
           </a>
           <div className="mt-2 mb-5 flex items-center justify-between">
             <p>
-              <span className="text-3xl font-bold text-slate-900">{e.originalPrice * (e.discount / 100)}</span>
+              <span className="text-3xl font-bold text-slate-900">{e.price}</span>
               <span className="text-sm text-slate-900 line-through">{e.originalPrice}</span>
             </p>
             <div className="flex items-center">
@@ -44,7 +49,7 @@ export default function Product() {
           <a 
             href="#"
             className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
-          >
+           onClick={() => FuncionComprar(e)}>
             Comprar Ahora
           </a>
         </div>
