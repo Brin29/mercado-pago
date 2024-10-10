@@ -3,7 +3,7 @@ import productos from "../productos.json"
 
 export default function Product() {
     const FuncionComprar = async (producto) => {
-        const response = await axios.post("http://localhost:3000/Mercado_Pago", productos)
+        const response = await axios.post("http://localhost:3000/Mercado_Pago", producto)
     
         window.location.href = response.data;
     }
@@ -27,7 +27,7 @@ export default function Product() {
           </a>
           <div className="mt-2 mb-5 flex items-center justify-between">
             <p>
-              <span className="text-3xl font-bold text-slate-900">{e.price}</span>
+              <span className="text-3xl font-bold text-slate-900">{e.unit_price}</span>
               <span className="text-sm text-slate-900 line-through">{e.originalPrice}</span>
             </p>
             <div className="flex items-center">

@@ -2,7 +2,6 @@ import { Router } from "express";
 import mercadopago from "mercadopago";
 import dotenv from "dotenv";
 dotenv.config();
-
 const Mercado_Pago = Router();
 
 mercadopago.configure({
@@ -10,17 +9,18 @@ mercadopago.configure({
 });
 
 Mercado_Pago.post("/", async (req, res) => {
-
-    const productos = req.body;
+    const producto = req.body;
     try{
         const preference = {
-            items: [{
-                title: productos.name, 
-                picture_url: productos.image,
-                unit_price: Number(productos.price),
-                currency_id: "ARS",
-                quantity: 1,
-            }],
+            items: [
+                {
+                    title: producto.name, 
+                    unit_price:  producto.unit_price,
+                    picture_url: producto.image,
+                    currency_id: "ARS",
+                    quantity: 1,
+                },
+            ],
             back_urls: {
                 success: "https://youtube.com",
                 failure: "https://youtube.com"
